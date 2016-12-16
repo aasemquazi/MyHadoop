@@ -2,7 +2,7 @@
 $ apt-get update
 
 *** Install java ***
-$ sudo apt-get install openjdk-7-jdk -y
+$ sudo apt-get install openjdk-8-jdk -y
 
 *** Configure SSH ***
 $ ssh-keygen
@@ -19,19 +19,19 @@ $ sudo mv hadoop-1.2.1 /usr/local/hadoop
 nano ~/.bashrc
 export HADOOP_PREFIX=/usr/local/hadoop/
 export PATH=$PATH:$HADOOP_PREFIX/bin
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME
 
 *** Setting Hadoop env ***
 nano /usr/local/hadoop/conf/hadoop-env.sh
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export HADOOP_OPTS=-Djava.net.preferIPV4Stack=true
 
 *** Configuring xml's ***
 nano /usr/local/hadoop/conf/core-site.xml
 <property>
 <name>fs.default.name</name>
-<value>hdfs://master.example.com:9000</value>
+<value>hdfs://localhost:9000</value>
 </property>
 <property>
 <name>hadoop.tmp.dir</name>
@@ -47,7 +47,7 @@ nano /usr/local/hadoop/conf/hdfs-site.xml
 sudo nano /usr/local/hadoop/conf/mapred-site.xml
 <property>
 <name>mapred.job.tracker</name>
-<value>hdfs://master.example.com:9001</value>
+<value>hdfs://localhost:9001</value>
 </property>
 
 *** Creating tmp directory ***
