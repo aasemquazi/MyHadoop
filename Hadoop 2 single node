@@ -67,7 +67,7 @@ nano core-site.xml
   <description>A base for other temporary directories.</description>
  </property>
  <property>
-  <name>fs.default.name</name>
+  <name>fs.defaultFS</name>
   <value>hdfs://localhost:54310</value>
 </property>
 
@@ -79,7 +79,7 @@ sudo chown hduser:hadoop /app/hadoop/tmp
 cp mapred-site.xml.template mapred-site.xml
 nano mapred-site.xml
 <property>
-  <name>mapred.job.tracker</name>
+  <name>mapreduce.jobtracker.address</name>
   <value>localhost:54311</value>
    </property>
 <property>
@@ -116,7 +116,7 @@ nano yarn-site.xml
 
 
 #Format Namenode
-hadoop namenode -format
+hdfs namenode -format
 
 start-all.sh 
 or start-dfs.sh
