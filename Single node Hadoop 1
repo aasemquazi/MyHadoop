@@ -60,7 +60,7 @@ exec bash
 hadoop namenode -format
 
 *** Start hadoop daemons/services
-startall.sh
+start-all.sh
 
 *** check process ***
 jps
