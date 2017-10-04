@@ -56,6 +56,7 @@ $ dsh -a sudo mv hadoop-1.2.1 /usr/local/hadoop
 
 
 -----*** Edit .bashrc ***-----
+
 nano .bashrc
 export HADOOP_PREFIX=/usr/local/hadoop/
 export PATH=$PATH:$HADOOP_PREFIX/bin
@@ -63,7 +64,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME
 
 >>> scp .bashrc to all nodes 
-$ dsh -a exec bash
+$ scp .bashrc ubuntu@snn:~
+
+$ dsh -a source .bashrc
 
 -----*** Configuring xml's ***-----
 
