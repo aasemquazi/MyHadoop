@@ -26,7 +26,7 @@ net.ipv6.conf.lo.disable_ipv6 = 1
 sudo sysctl -p
 
 #Download Hadoop
-wget -c https://www-us.apache.org/dist/hadoop/common/hadoop-2.9.2/hadoop-2.9.2.tar.gz
+wget -c https://downloads.apache.org/hadoop/common/stable2/hadoop-2.10.1.tar.gz
 
 #Extract and Install Hadoop tar ball
 tar -xzvf hadoop-2.9.2.tar.gz
