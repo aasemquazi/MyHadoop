@@ -29,8 +29,8 @@ sudo sysctl -p
 wget -c https://downloads.apache.org/hadoop/common/stable2/hadoop-2.10.1.tar.gz
 
 #Extract and Install Hadoop tar ball
-tar -xzvf hadoop-2.9.2.tar.gz
-sudo mv hadoop-2.9.2 /usr/local/hadoop
+tar -xzvf hadoop-2.10.1.tar.gz
+sudo mv hadoop-2.10.1 /usr/local/hadoop
 sudo chown hduser:hadoop -R /usr/local/hadoop
 
 # Set Enviornment Variable
